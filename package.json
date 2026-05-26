@@ -1,0 +1,56 @@
+{
+  "name": "@huekit/hex",
+  "version": "1.0.0",
+  "description": "Convert hex colors to oklch() CSS strings. The first piece of huekit, the OKLCH toolkit for designers.",
+  "keywords": [
+    "oklch",
+    "oklab",
+    "color",
+    "css",
+    "hex",
+    "hex-to-oklch",
+    "color-conversion",
+    "color-space",
+    "design-system",
+    "tailwind",
+    "perceptual-color",
+    "huekit"
+  ],
+  "author": "Vinod Rajpurohit <doniv01@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doniv01/huekit.git",
+    "directory": "packages/hex"
+  },
+  "homepage": "https://github.com/doniv01/huekit/tree/main/packages/hex#readme",
+  "bugs": {
+    "url": "https://github.com/doniv01/huekit/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false
+}
